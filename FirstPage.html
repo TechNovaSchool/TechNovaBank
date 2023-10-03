@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TN Bank - Online Banking</title>
+    <style>
+    body {
+      background-color: #f1f8ea;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .btn-container button {
+      width: 180px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <h2>TN Bank - Online Banking</h2>
+    <div class="btn-container">
+        <button onclick="navigateToLoginPage()">Member</button>
+        <button onclick="navigateToCreateAccountPage()">New Member</button>
+    </div>
+</div>
+
+<script>
+    function navigateToLoginPage() {
+      // Navigate to the login page
+      window.location.href = "LoginPage.html";
+    }
+
+    function navigateToCreateAccountPage() {
+       window.location.href = "NewMember.html";
+    }
+  </script>
+</body>
+</html>

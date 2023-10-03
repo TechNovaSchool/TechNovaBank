@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TN Bank - Login</title>
+    <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 100px;
+      padding: 50px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <h2>TN Bank - Login</h2>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group">
+            <button type="button" onclick="login()">Login</button>
+        </div>
+
+        <div class="form-group">
+            <button type="button" onclick="navigateToCreateAccountPage()">Become A Member</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    function login() {
+      var usernameInput = document.getElementById("username");
+      var passwordInput = document.getElementById("password");
+
+      // Perform validation, authentication, and navigate to home page if successful
+      var username = usernameInput.value;
+      var password = passwordInput.value;
+
+      // Example validation and authentication
+      if (username === "admin" && password === "password") {
+        // Navigate to the home page
+        window.location.href = "HomePage.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+
+    function navigateToCreateAccountPage() {
+       window.location.href = "NewMember.html";
+    }
+  </script>
+</body>
+</html>

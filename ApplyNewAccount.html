@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Bank Account</title>
+  <style>
+        body {
+            background-color: #f0f8ff; /* Light blue */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff8c00; /* Light orange */
+        }
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            background-color: #90ee90; /* Light green */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="tel"], input[type="email"], textarea {
+            width: 300px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #applyButton {
+            background-color: #ff8c00; /* Light orange */
+            color: white;
+            margin-right: 10px;
+        }
+
+        #cancelButton {
+            background-color: #ff8c00; /* Light orange */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<form id="accountForm">
+  <h1>New Bank Account</h1>
+  <p>Personal Information</p>
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" required><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" required><br>
+
+  <label for="dobMonth">Date of Birth:</label>
+  <br>
+  <label for="dobMonth">Month</label>
+  <select id="dobMonth" required>
+    <option value="" disabled selected>Month</option>
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+  </select>
+  <br>
+  <label for="dobMonth">Day</label>
+  <select id="dobDay" required>
+    <option value="" disabled selected>Day</option>
+    <option value="Mon">1</option>
+    <option value="Tue">2</option>
+    <option value="Wed">3</option>
+    <option value="Thu">4</option>
+    <option value="Fri">5</option>
+    <option value="Sat">6</option>
+    <option value="Sun">7</option>
+  </select>
+  <br>
+  <label for="dobMonth">Year</label>
+  <select id="dobYear" required>
+    <option value="" disabled selected>Year</option>
+    <option value="2023">2023</option>
+
+  </select><br>
+
+  <label for="mothersMaidenName">Mother's Maiden Name:</label>
+  <input type="text" id="mothersMaidenName" required><br>
+
+  <label for="cellPhone">Cell Phone:</label>
+  <input type="tel" id="cellPhone" required><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" required><br>
+
+  <label for="address">Address:</label>
+  <textarea id="address" rows="4" required></textarea><br>
+
+  <label for="accountType">Account Type:</label>
+  <select id="accountType" required>
+    <option value="" disabled selected>Select Account Type</option>
+    <option value="checking">Checking Account</option>
+    <option value="saving">Saving Account</option>
+    <option value="businessChecking">Business Checking Account</option>
+    <option value="businessSaving">Business Saving Account</option>
+  </select><br>
+
+  <button type="submit" id="applyButton" onclick="showAlert()">Apply</button>
+  <button type="button" id="cancelButton" onclick="goToHomepage()">Cancel</button>
+</form>
+
+<script>
+        document.getElementById("accountForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Appointment scheduled successfully!");
+            window.location.href = "homepage.html";
+        });
+
+        function goToHomepage() {
+            window.location.href = "homepage.html";
+        }
+    </script>
+</body>
+</html>

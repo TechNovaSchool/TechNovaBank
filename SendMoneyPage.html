@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send Money Page</title>
+  <style>
+    body {
+      background-color: #f1f8f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      background-color: #e5f1f9;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    .cancel-button {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Send Money Page</h1>
+
+  <form id="moneyTransferForm">
+    <label for="accountNumber">Account Number:</label>
+    <input type="text" id="accountNumber" required><br><br>
+
+    <label for="routingNumber">Routing Number:</label>
+    <input type="text" id="routingNumber" required><br><br>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" required><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" required><br><br>
+
+    <label for="bankName">Bank Name:</label>
+    <select id="bankName">
+      <option value="Bank A">Bank A</option>
+      <option value="Bank B">Bank B</option>
+      <option value="Bank C">Bank C</option>
+      <option value="Bank D">Bank D</option>
+      <option value="Bank E">Bank E</option>
+    </select><br><br>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" required><br><br>
+
+    <button type="submit">Send</button>
+    <button type="button" onclick="cancel()" class="cancel-button">Cancel</button>
+  </form>
+</div>
+
+<script>
+    function cancel() {
+      window.location.href = "HomePage.html";
+    }
+
+    document.getElementById("moneyTransferForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Money sent successfully!");
+      // You can add additional logic here to handle the form submission if needed
+    });
+  </script>
+</body>
+</html>

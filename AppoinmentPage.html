@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule Appointment</title>
+  <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f2f1;
+        }
+
+        .form-container {
+            background-color: #b2dfdb;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+  <h2>Schedule Appointment</h2>
+  <form id="appointmentForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="reason">Reason for Appointment:</label>
+    <select id="reason" name="reason" required>
+      <option value="">Select an option</option>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+
+    <label for="day">Day:</label>
+    <select id="day" name="day" required>
+      <option value="">Select a day</option>
+      <option value="Mon">1</option>
+      <option value="Tue">2</option>
+      <option value="Wed">3</option>
+      <option value="Thu">4</option>
+      <option value="Fri">5</option>
+      <option value="Sat">6</option>
+      <option value="Sun">7</option>
+
+      <!-- Generate options for 31 days -->
+      <?php
+                for ($i = 1; $i <= 31; $i++) {
+                    echo "<option value='$i'>$i</option>";
+      }
+      ?>
+    </select>
+
+    <label for="month">Month:</label>
+    <select id="month" name="month" required>
+      <option value="">Select a month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+
+    <label for="year">Year:</label>
+    <select id="year" name="year" required>
+      <option value="2023">2023</option>
+    </select>
+
+    <label for="time">Time:</label>
+    <input type="text" id="time" name="time" required>
+
+    <button type="submit" form="appointmentForm">Submit</button>
+    <button onclick="cancelAppointment()">Cancel</button>
+  </form>
+</div>
+
+<script>
+        function cancelAppointment() {
+            window.location.href = "homepage.html";
+        }
+
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Appointment scheduled successfully!");
+            window.location.href = "homepage.html";
+        });
+    </script>
+</body>
+</html>

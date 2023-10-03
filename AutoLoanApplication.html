@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Loan Application</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background-color: white;
+      padding: 9px;
+      text-align: center;
+      border-radius: 5px;
+
+    }
+
+    .section {
+      background-color: lightgreen;
+      padding: 40px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-button:hover {
+      background-color: darkblue;
+    }
+
+    .cancel-button {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cancel-button:hover {
+      background-color: darkred;
+    }
+
+    .success-message {
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1 style="color: Green;">Auto Loan Application*</h1>
+</div>
+
+<div class="section" style="background-color: white;">
+  <h2 style="color: green;">Personal Information*</h2>
+  <form id="personal-info-form">
+    <label for="first-name" class="form-label">First Name</label>
+    <input type="text" id="first-name" class="form-input" required>
+
+    <label for="last-name" class="form-label">Last Name</label>
+    <input type="text" id="last-name" class="form-input" required>
+
+    <label for="address" class="form-label">Address</label>
+    <input type="text" id="address" class="form-input" required>
+
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" class="form-input" required>
+
+    <label for="phone" class="form-label">Phone</label>
+    <input type="tel" id="phone" class="form-input" required>
+
+    <label for="social-security" class="form-label">Social Security</label>
+    <input type="text" id="social-security" class="form-input" required>
+
+    <label for="income" class="form-label">Income</label>
+    <input type="number" id="income" class="form-input" required>
+
+    <label for="job-title" class="form-label">Job Title</label>
+    <input type="text" id="job-title" class="form-input" required>
+    <P style="color: red">Scroll down*</P>
+  </form>
+</div>
+
+<div class="section" style="background-color: white;">
+  <h2 style="color: green;">Vehicle Information*</h2>
+  <form id="vehicle-info-form">
+    <label for="vehicle-type" class="form-label">Vehicle Type</label>
+    <select id="vehicle-type" class="form-select" required>
+      <option value="">Select Vehicle Type</option>
+      <option value="Sedan">Sedan</option>
+      <option value="SUV">SUV</option>
+      <option value="Truck">Truck</option>
+      <option value="Convertible">Convertible</option>
+    </select>
+
+    <label for="make" class="form-label">Make</label>
+    <select id="make" class="form-select" required>
+      <option value="">Select Make</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Honda">Honda</option>
+      <option value="Ford">Ford</option>
+      <option value="Chevrolet">Chevrolet</option>
+    </select>
+
+    <label for="model" class="form-label">Model</label>
+    <select id="model"
+            class="form-select" required>
+      <option value="">Select Model</option>
+      <option value="Camry">Camry</option>
+      <option value="Accord">Accord</option>
+      <option value="F-150">F-150</option>
+      <option value="Silverado">Silverado</option>
+    </select>
+
+    <label for="vin-number" class="form-label">VIN Number</label>
+    <input type="text" id="vin-number" class="form-input" required>
+
+    <label for="mileage" class="form-label">Mileage</label>
+    <input type="number" id="mileage" class="form-input" required>
+
+    <label for="color" class="form-label">Color</label>
+    <select id="color" class="form-select" required>
+      <option value="">Select Color</option>
+      <option value="Red">Red</option>
+      <option value="Blue">Blue</option>
+      <option value="White">White</option>
+      <option value="Black">Black</option>
+    </select>
+
+    <div style="text-align: center;">
+      <button type="submit" class="form-button" id="submit-btn" onclick="submitApp()">Submit Application</button>
+      <button type="button" class="cancel-button" onclick="location.href='homepage.html'">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div class="footer">
+  <p>&copy; 2023 TN Bank. All rights reserved.</p>
+</div>
+
+<script>
+
+  function submitApp () {
+
+        alert("You loan application has been successfully submitted."));
+        window.location.href = "Homepage.html";
+
+});
+
+  </script>
+
+</body>
+</html>

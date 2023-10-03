@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visa Loan Application</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #006600;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+    }
+    .success-message {
+      color: #006600;
+      font-weight: bold;
+    }
+    .hover-button:hover::after {
+      content: "APR: 5.5%";
+    }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h1>Visa Loan Application</h1>
+  <form id="loan-application-form">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required><br><br>
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required><br><br>
+
+    <label for="title">Title:</label>
+    <select id="title" name="title" required>
+      <option value=""></option>
+      <option value="Mr.">Mr.</option>
+      <option value="Mrs.">Mrs.</option>
+      <option value="Miss">Miss</option>
+      <option value="Ms.">Ms.</option>
+    </select><br><br>
+
+    <label for="marital-status">Marriage Status:</label><br>
+    <input type="radio" id="single" name="marital-status" value="single" required>
+    <label for="single">Single</label><br>
+
+    <input type="radio" id="married" name="marital-status" value="married" required>
+    <label for="married">Married</label><br>
+
+    <input type="radio" id="other" name="marital-status" value="other" required>
+    <label for="other">Other</label><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mother-name">Mother's Name:</label>
+    <input type="text" id="mother-name" name="mother-name" required><br><br>
+
+    <label for="middle-name">Middle Name:</label>
+    <input type="text" id="middle-name" name="middle-name" required><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <label for="date-of-birth">Date of Birth:</label>
+    <input type="date" id="date-of-birth" name="date-of-birth" required><br><br>
+
+    <label for="income">Income:</label>
+    <input type="number" id="income" name="income" required><br><br>
+
+    <label for="job-title">Job Title:</label>
+    <select id="job-title" name="job-title" required>
+      <option value=""></option>
+      <option value="Manager">Manager</option>
+      <option value="Engineer">Engineer</option>
+      <option value="Teacher">Teacher</option>
+      <option value="Nurse">Nurse</option>
+    </select><br><br>
+
+    <label for="loan-amount">Loan Amount Requested:</label>
+    <input type="number" id="loan-amount" name="loan-amount" required><br><br>
+
+    <label for="employment-status">Employment Status:</label>
+    <select id="employment-status" name="employment-status" required>
+      <option value=""></option>
+      <option value="Employed">Employed</option>
+      <option value="Self-Employed">Self-Employed</option>
+      <option value="Unemployed">Unemployed</option>
+    </select><br><br>
+
+    <button type="submit" id="submit-btn">Submit</button>
+    <button type="button" id="cancel-btn">Cancel</button>
+    <button type="button" id="apr-btn" class="hover-button">Hover for APR</button>
+  </form>
+  <p id="success-message" class="success-message" style="display: none;">Application submitted successfully!</p>
+</div>
+
+<script>
+    document.getElementById("loan-application-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Application Has been successfully submitted!");
+      window.location.href = "homepage.html";
+
+    });
+
+    document.getElementById("cancel-btn").addEventListener("click", function() {
+      window.location.href = "homepage.html";
+    });
+  </script>
+</body>
+</html>
