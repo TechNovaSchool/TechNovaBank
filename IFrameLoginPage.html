@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iFrame Login Page</title>
+  <style>
+        body {
+            background-color: #f0f8ff; /* light blue */
+        }
+
+        .iframe-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iframe-container iframe {
+            width: 600px;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center"  id="page-title">This page has an iFrame</h1>
+
+<div class="iframe-container">
+  <iframe id="iframe-container"   src="IFramePage.html"></iframe>
+</div>
+</body>
+</html>
+
