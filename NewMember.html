@@ -177,7 +177,7 @@
         </select>
       </div>
       <div class="btn-container">
-        <button type="submit" onclick="window.location.href='AccountCreated.html'">Submit</button>
+        <button type="submit">Submit</button>
       </div>
       <div class="btn-container">
         <button type="submit" onclick="window.location.href='LoginPage.html'">Cancel</button>
@@ -188,9 +188,10 @@
 
 
   <script>
-    function navigateToHomePage() {
-      window.location.href = AccountCreated.html";
-    }
+    document.getElementById("accountCreationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        window.location.href='AccountCreated.html';
+ });
   </script>
 
 </body>
