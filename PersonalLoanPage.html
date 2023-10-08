@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Loan Application Form</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-title {
+      text-align: center;
+      font-size: 24px;
+      color: #008000; /* Green color */
+    }
+
+    .form-field {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      color: white;
+      background-color: #008000; /* Green color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-cancel {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      color: white;
+      background-color: #FFA500; /* Orange color */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="form-container">
+  <h1 class="form-title">Personal Loan Application Form</h1>
+  <form>
+    <div class="form-field">
+      <label class="form-label" for="name">Full Name:</label>
+      <input class="form-input" type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="email">Email:</label>
+      <input class="form-input" type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="phone">Phone Number:</label>
+      <input class="form-input" type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="address">Address:</label>
+      <input class="form-input" type="tel" id="address" name="phone" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="employment">Employment:</label>
+      <input class="form-input" type="text" id="employment" name="employment" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="income">Income:</label>
+      <input class="form-input" type="text" id="income" name="employment" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="amount">Loan Amount:</label>
+      <input class="form-input" type="number" id="amount" name="amount" required>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label" for="purpose">Loan Purpose:</label>
+      <input class="form-input" type="text" id="purpose" name="purpose" required>
+    </div>
+    <button class="form-submit" type="submit" onclick="submitForm()">Submit</button>
+    <p></p>
+    <button class="form-cancel" type="button" onclick="goBack()">Cancel</button>
+  </form>
+</div>
+
+<script>
+    function submitForm() {
+      alert("Thank you for submitting your loan application!");
+      window.close();
+    }
+
+    function goBack() {
+      history.back();
+    }
+  </script>
+</body>
+</html>
+
