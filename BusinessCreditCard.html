@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tech Nova Business Credit Card Loan Application</title>
+  <style>
+    /* Styling for the form */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: white;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+      h3 {
+      text-align: center;
+      color: blue;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    input[type="button"] {
+      background-color: #ff9800;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="button"]:hover {
+      background-color: #e68a00;
+    }
+    footer {
+      background-color: #001f3f;
+      padding: 20px;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h2>Tech Nova Business Credit Card Loan Application</h2>
+  <h3>Personal Information Page</h3>
+</header>
+
+<form id="creditCardLoanForm" action="BusinessInfoPage.html" method="post">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="fullName" required>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="fullName" required>
+
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Phone Number:</label>
+  <input type="text" id="phone" name="phone" required>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" required>
+
+  <label for="creditLimit">Desired Credit Limit:</label>
+  <input type="text" id="creditLimit" name="creditLimit" required>
+
+  <label for="employmentStatus">Employment Status:</label>
+  <select id="employmentStatus" name="employmentStatus" required>
+    <option value="">Select...</option>
+    <option value="employed">Employed</option>
+    <option value="selfEmployed">Self-employed</option>
+    <option value="unemployed">Unemployed</option>
+  </select>
+
+  <label for="income">Monthly Income:</label>
+  <input type="text" id="income" name="income" required>
+
+  <input type="submit" value="Continue">
+  <input type="button" value="Cancel" onclick="window.close();">
+</form>
+
+<footer>
+  Tech Nova Business &copy; 2023. All rights reserved. Only for Tech Nova testing.
+</footer>
+</body>
+</html>
+
