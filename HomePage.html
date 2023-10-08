@@ -33,10 +33,12 @@
     .navbar a {
       float: left;
       display: block;
-      color: #333;
+      color: blue;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
+      font-size: 18px;
+
 
     }
 
@@ -44,13 +46,15 @@
       float: left;
       overflow: hidden;
       float: center;
+      color: blue;
+
     }
 
     .dropdown .drop-btn {
-      font-size: 16px;
+      font-size: 18px;
       border: none;
       outline: none;
-      color: #333;
+      color: blue;
       padding: 14px 16px;
       background-color: inherit;
       font-family: inherit;
@@ -58,7 +62,8 @@
     }
 
     .navbar a:hover, .dropdown:hover .drop-btn {
-      background-color: #ddd;
+      background-color: lightblue;
+      color: green;
     }
 
     .dropdown-content {
@@ -72,7 +77,7 @@
 
     .dropdown-content a {
       float: none;
-      color: #333;
+      color: blue;
       padding: 15px 20px;
       text-decoration: none;
       display: block;
@@ -80,7 +85,7 @@
     }
 
     .dropdown-content a:hover {
-      background-color: #ddd;
+      background-color: lightblue;
     }
 
     .dropdown:hover .dropdown-content {
@@ -119,7 +124,7 @@
     .action-buttons button {
       margin: 0 15px;
       padding: 15px 30px;
-      font-size: 16px;
+      font-size: 20px;
       background-color: lightblue;
       color: green;
       border: none;
@@ -170,7 +175,11 @@
       font-size: 24px;
       margin-bottom: 20px;
       color: white;
+    }
 
+    .a {
+
+    color: navy;
 
     }
 
@@ -198,7 +207,7 @@
     <div class="dropdown-content">
       <a href="BusinessCreditCard.html" onclick="apply()" target="_blank">Credit Card</a>
       <a href="BusinessSavingPage.html" onclick="apply()" target="_blank">Saving</a>
-      <a href="ApplicationPage.html" onclick="apply()" >Checking</a>
+      <a href="BusinessSavingPage.html" onclick="apply()" target="_blank">Checking</a>
     </div>
   </div>
 
@@ -206,14 +215,13 @@
     <button class="drop-btn">Open New Account</button>
     <div class="dropdown-content">
       <a href="ApplyNewAccount.html" onclick="apply()">Checking</a>
-      <a href="ApplyNewAccount.html" onclick="apply()">Saving</a>
-      <a href="ApplyNewAccount.html" onclick="apply()">Business Saving</a>
+      <a href="BusinessSavingPage.html" onclick="apply()" target="_blank">Saving</a>
+      <a href="BusinessSavingPage.html" onclick="apply()" target="_blank">Business Saving</a>
       <a href="ApplyNewAccount.html" onclick="apply()">Business Checking</a>
     </div>
   </div>
   <a href="AppointmentPage.html">Schedule Appointment</a>
-  <a href="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" disabled="true" target="_blank">Go To OrangeHRM</a>
-  <a href="IFrameLoginPage.html"  target="_blank">Go To iFrameLoginPage</a>
+  <a href="IFrameLoginPage.html"  target="_blank">Go To iFrame Login Page</a>
   <a href="LoginPage.html" id="logOut" onClick="navigateToLoginPage()">Log Out</a>
   <a href="ProductPage.html" id="search" >Search</a>
 </div>

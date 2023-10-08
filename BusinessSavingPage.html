@@ -15,7 +15,10 @@
     }
 
     h1 {
-      color: navy;
+      color: Green;
+      text-align: center;
+
+
     }
 
     label {
@@ -62,12 +65,18 @@
     footer {
       margin-top: 50px;
       text-align: center;
-      color: #999;
+      color: white;
+      border-radius: 4px;
+      background-color: blue;
+      padding: 20px
+
+
     }
   </style>
 </head>
 <body>
-<h1>New Tech Nova Business Savings Account</h1>
+<h1>Tech Nova Bank</h1>
+<h2>New Business Account</h2>
 <form id="account-form">
   <label for="firstName">First Name:</label>
   <input type="text" id="firstName" required>
@@ -110,7 +119,8 @@
     accountForm.addEventListener('submit', function(event) {
       event.preventDefault();
       alert('Your account has been successfully created.');
-      window.location.href = 'homepage.html'; // Replace 'homepage.html' with your actual homepage URL
+      window.close();
+
     });
 
     const cancelButton = document.querySelector('.cancel-button');
@@ -122,8 +132,11 @@
   </script>
 
 <footer>
-  &copy; 2021 Tech Nova Savings. All rights reserved.
+  &copy; 2021 Tech Nova Savings. All rights reserved. Use For Testing Only.
 </footer>
 </body>
 </html>
+
+
+
 
