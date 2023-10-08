@@ -88,15 +88,28 @@
 <script>
 
 
+
+
+  var currentBalance = 2500;
+
+
+
+
+
     function cancel() {
       window.location.href = "HomePage.html";
     }
 
     document.getElementById("moneyTransferForm").addEventListener("submit", function(event) {
       event.preventDefault();
-      alert("Money sent successfully!");
-      window.location.href = "HomePage.html";
+
+      if(confirm('You are sending $' + document.getElementById('amount').value + ' to: ' + document.getElementById('firstName').value + '. Is this OK?')){
+         window.location.href = "HomePage.html";
+      }
+
     });
+
+
   </script>
 </body>
 </html>
