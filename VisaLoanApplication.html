@@ -4,7 +4,7 @@
   <title>Visa Loan Application</title>
   <style>
     body {
-      background-color: #f2f2f2;
+      background-color: lightgrey;
       font-family: Arial, sans-serif;
     }
     h1 {
@@ -13,9 +13,25 @@
     .form-container {
       max-width: 400px;
       margin: 0 auto;
-      padding: 20px;
-      background-color: #ffffff;
+      padding: 80px;
+      background-color: #f0fff0;
       border: 1px solid #cccccc;
+      border-radius: 5px;
+
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    input[type="email"],
+    input[type="password"] {
+
+      width: 99%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      position: center;
     }
     .success-message {
       color: #006600;
@@ -23,6 +39,15 @@
     }
     .hover-button:hover::after {
       content: "APR: 5.5%";
+    }
+
+     button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -45,7 +70,10 @@
       <option value="Ms.">Ms.</option>
     </select><br><br>
 
-    <label for="marital-status">Marriage Status:</label><br>
+    <label for="middle-name">Middle Name: (if any)</label>
+    <input type="text" id="middle-name" name="middle-name" ><br><br>
+
+    <label >Marriage Status:</label><br>
     <input type="radio" id="single" name="marital-status" value="single" required>
     <label for="single">Single</label><br>
 
@@ -60,9 +88,6 @@
 
     <label for="mother-name">Mother's Name:</label>
     <input type="text" id="mother-name" name="mother-name" required><br><br>
-
-    <label for="middle-name">Middle Name:</label>
-    <input type="text" id="middle-name" name="middle-name" required><br><br>
 
     <label for="address">Address:</label>
     <input type="text" id="address" name="address" required><br><br>

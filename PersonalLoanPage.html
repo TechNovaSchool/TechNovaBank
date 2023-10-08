@@ -114,7 +114,8 @@
 </div>
 
 <script>
-    function submitForm() {
+    function submitForm(event) {
+      event.preventDefault();
       alert("Thank you for submitting your loan application!");
       window.close();
     }
