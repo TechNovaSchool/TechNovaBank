@@ -251,6 +251,7 @@
     <button onclick="addMoney()">Add Money to Checking</button>
     <button onclick="withdrawMoney()" >Withdraw Money</button>
     <button onclick="sendMoney()" >Send Money</button>
+    <button onclick="transferMoney()" >Transfer Money</button>
     <button onclick="depositCheck()">Deposit check</button>
   </div>
 </div>
@@ -267,10 +268,6 @@
 var currentBalance = 2500;
 
 
-
-
-
-
 function addMoney() {
         var amount = parseFloat(prompt("Enter the amount to add:"));
 
@@ -281,7 +278,7 @@ function addMoney() {
              currentBalance += amount;
         document.querySelector(".balance").textContent = currentBalance.toFixed(2);
         alert("Money added successfully!");
-      }
+}
 
 
 function depositCheck() {
@@ -295,13 +292,12 @@ function depositCheck() {
              currentBalance += amount;
              document.querySelector(".balance").textContent = currentBalance.toFixed(2);
              alert("Deposit check success!");
-      }
+}
 
 
 function withdrawMoney() {
-        //var currentBalance = 1000;
-        var amount = parseFloat(prompt("Enter the amount to withdraw:"));
 
+        var amount = parseFloat(prompt("Enter the amount to withdraw:"));
         if (isNaN(amount) || amount < 0) {
           alert("Invalid amount. Please enter a positive number.");
           return;
@@ -311,20 +307,25 @@ function withdrawMoney() {
           alert("Insufficient balance. You cannot withdraw more than your current balance.");
           return;
         }
-
         currentBalance -= amount;
         document.querySelector(".balance").textContent = currentBalance.toFixed(2);
         alert("Money withdrawn successfully!");
-      }
+}
 
 
 function sendMoney() {
    window.location.href = "SendMoneyPage.html";
-
 }
+
 
 function ApplyNewAccount() {
    window.location.href = "ApplyNewAccountPage.html";
+}
+
+
+function transferMoney(){
+
+   alert("Transfer Money:  is coming soon!")
 }
 
 </script>
