@@ -67,7 +67,7 @@
 <body>
 <div class="form-container">
   <h1 class="form-title">Personal Loan Application Form</h1>
-  <form>
+  <form id="personal-application-form">
     <div class="form-field">
       <label class="form-label" for="name">Full Name:</label>
       <input class="form-input" type="text" id="name" name="name" required>
@@ -107,18 +107,22 @@
       <label class="form-label" for="purpose">Loan Purpose:</label>
       <input class="form-input" type="text" id="purpose" name="purpose" required>
     </div>
-    <button class="form-submit" type="submit" onclick="submitForm()">Submit</button>
+    <button class="form-submit" type="submit">Submit</button>
     <p></p>
     <button class="form-cancel" type="button" onclick="goBack()">Cancel</button>
+    <div class="footer">
+      <p>&copy; 2023 TN Bank. All rights reserved.</p>
+    </div>
   </form>
 </div>
 
 <script>
-    function submitForm(event) {
+     document.getElementById("personal-application-form").addEventListener("submit", function(event) {
       event.preventDefault();
-      alert("Thank you for submitting your loan application!");
-      window.close();
-    }
+      alert("Application Has been successfully submitted!");
+      window.location.href='HomePage.html'
+
+    });
 
     function goBack() {
       history.back();
